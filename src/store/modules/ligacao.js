@@ -270,13 +270,6 @@ const actions = {
       extraHeaders: ["X-FROM: WEB"],
       sessionTimersExpires: 180,
       mediaConstraints: { audio: true, video: false },
-      pcConfig: {
-        iceServers: [
-          {
-            urls: ["stun:stun.l.google.com:19302", "stun2.l.google.com:19302"],
-          },
-        ],
-      },
     };
     if (state.isRegister) {
       if (state.number.length > 1) {
