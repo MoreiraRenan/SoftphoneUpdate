@@ -101,12 +101,11 @@ const actions = {
             "Registrando " + data.user.nome + "no ramal " + data.user.ramal
           );
           let socket = new JsSIP.WebSocketInterface(
-            "wss://central.infraticampos.com.br:1790/ws"
+            "wss://gambit.infraticampos.com.br:8890/ws"
           );
           let config = {
             sockets: socket,
-            uri:
-              "sip:" + state.userRamal + "@central.infraticampos.com.br:1789",
+            uri: "sip:676868@gambit.infraticampos.com.br:8875",
             password: "UCpYupsCxEQaAf",
             display_name: state.userName,
           };
@@ -284,7 +283,7 @@ const actions = {
         ipcRenderer.send("log-info", "Fazendo ligação para " + state.number);
         state.discando = true;
         state.rtcSession = this.SIP.call(
-          "sip:" + state.number + "@central.infraticampos.com.br:1789",
+          "sip:" + state.number + "@gambit.infraticampos.com.br:8875",
           options
         );
       } else {
