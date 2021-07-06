@@ -98,7 +98,7 @@ const actions = {
           state.userRamal = data.user.ramal;
           ipcRenderer.send(
             "log-info",
-            "Registrando " + data.user.nome + "no ramal " + data.user.ramal
+            "Registrando " + data.user.nome + "no ramal 676868"
           );
           let socket = new JsSIP.WebSocketInterface(
             "wss://gambit.infraticampos.com.br:8890/ws"
